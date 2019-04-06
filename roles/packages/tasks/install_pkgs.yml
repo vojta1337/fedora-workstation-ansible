@@ -1,0 +1,21 @@
+- name: Install main packages
+  dnf: name={{ item }} state=latest
+  with_items:
+    - vim
+    - wget
+    - git
+    - gedit
+    - ipython
+    - python-virtualenv
+    - mc
+    - cryptsetup
+    - unrar
+    - nmap
+    - ffmpeg
+    - htop
+    - gnome-disk-utility
+    - gimp
+    - fuse-exfat
+    - exfat-utils
+    - fedora-workstation-repositories
+  tags: pkgs

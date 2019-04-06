@@ -1,0 +1,38 @@
+---
+# This playbook installs Docker
+
+- name: Install Docker package
+  dnf: name=docker state=latest
+
+- name: Install docker-compose package
+  dnf: name=docker-compose state=latest
+
+- name: Create docker group
+  group:
+    name=docker
+    state=present
+
+- name: Add user to docker group
+  command: usermod -a -G docker {{ user }}
+
+- name: Enable docker service
+  service:
+    name=docker
+    enabled=yes
+
+- file:
+    path: /home/docker
+    state: directory
+    mode: 0755
+
+- name: change default docker storage location 
+  blockinfile:
+    path: /etc/sysconfig/docker 
+    block: |
+      # change default docker storage location 
+      other_args="-g /home/docker" 
+
+- name: Restart Docker service
+  service:
+    name=docker
+    state=restarted

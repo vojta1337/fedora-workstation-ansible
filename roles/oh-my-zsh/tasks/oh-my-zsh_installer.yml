@@ -1,0 +1,22 @@
+---
+# This playbook installs oh-my-zsh
+# https://github.com/robbyrussell/oh-my-zsh
+
+- name: Clone oh-my-zsh files
+  git:
+    repo=https://github.com/robbyrussell/oh-my-zsh.git
+    dest={{home_dir}}/.oh-my-zsh
+
+- name: Create config from template
+  template:
+    src=zshrc
+    dest={{ home_dir }}/.zshrc
+    mode=0700
+    owner={{ user }}
+    group={{ group }}
+
+- name: Make sure zsh is installed
+  dnf: name=zsh state=latest
+
+- name: Set ZSH as default shell for the user
+  command: usermod -s /usr/bin/zsh {{ user }}
