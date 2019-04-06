@@ -18,4 +18,5 @@
     - fuse-exfat
     - exfat-utils
     - fedora-workstation-repositories
+    - tmux
   tags: pkgs
