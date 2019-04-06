@@ -1,2 +1,2 @@
-[local]
-fedex	ansible_ssh_host=localhost
+[remote]
+f29 ansible_ssh_host=localhost ansible_ssh_port=2222 ansible_ssh_user=xc

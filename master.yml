@@ -1,47 +1,19 @@
 ---
-- name: Fedex provisioner
-  gather_facts: false
-  hosts: localhost
+- name: Fedora 29 best setup 
+  gather_facts: true
+  hosts: f29 
   become: yes
 
   roles:
-    - prepare_env
-    - vim
-    - prepare-dotcfgs
-    - ssh-config
+    - repo_rpmfusion 
     - packages
+    - fonts
+    - vim
     - git
     - oh-my-zsh
-    - tmux
-    - tmuxinator
-    - guake
-    - dropbox
     - libreoffice
     - vlc
-    - firefox
-    - virtualbox
     - google-chrome
     - docker
-    - hstr
-    - wireshark
-    - sysdig
-    - slack
-    - hipchat
-    - steam
-    - fonts
-    - redshift
-    - libvirt
-    - ntp
-    - translator-cli
-    - npm
-    - npm_modules
-    - evernote
-    - gitkraken
     - pycharm
-    - intellij
-    - aws
     - keybase
-    - hashicorp_packer
-    - hashicorp_terraform
-    - gitter
-    - exercism.io
