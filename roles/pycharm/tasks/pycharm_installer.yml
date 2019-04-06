@@ -1,0 +1,8 @@
+---
+# This playbook installs pycharm
+
+- name: Install additional repos
+  dnf: name=fedora-workstation-repositories state=latest
+
+- name: Install Google-Chrome package
+  dnf: name=pycharm-community enablerepo=phracek-PyCharm state=present
