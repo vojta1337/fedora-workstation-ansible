@@ -21,4 +21,5 @@
     - tmux
     - openfortivpn
     - NetworkManager-fortisslvpn-gnome
+    - cassandra
   tags: pkgs
