@@ -22,4 +22,7 @@
     - openfortivpn
     - NetworkManager-fortisslvpn-gnome
     - cassandra
+    - python2-virtualenv
+    - python3-virtualenv
+    - postgresql-devel
   tags: pkgs
