@@ -1,7 +1,7 @@
 ---
 - name: Fedora 29 best setup 
   gather_facts: true
-  hosts: f29 
+  hosts: f29
   become: yes
 
   roles:
@@ -17,3 +17,4 @@
     - docker
     - pycharm
     - keybase
+    - tmuxp

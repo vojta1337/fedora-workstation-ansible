@@ -1,0 +1,4 @@
+---
+# this playbook includes Tmuxp installer
+- include: tmuxp_installer.yml
+  tags: tmuxp
