@@ -25,4 +25,5 @@
     - python2-virtualenv
     - python3-virtualenv
     - postgresql-devel
+    - redis
   tags: pkgs
