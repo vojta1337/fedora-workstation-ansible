@@ -27,4 +27,5 @@
     - postgresql-devel
     - redis
     - postgresql
+    - python3-black
   tags: pkgs
